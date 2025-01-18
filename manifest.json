@@ -8,9 +8,6 @@
         "storage",
         "activeTab"
     ],
-    "background": {
-        "service_worker": "background.js"
-    },
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
@@ -25,7 +22,7 @@
                 "<all_urls>"
             ],
             "js": [
-                "content.js"
+                
             ],
             "css": [
                 "styles.css"

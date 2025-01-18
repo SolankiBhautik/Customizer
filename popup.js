@@ -53,10 +53,11 @@ function activateCustomization() {
         }
         #customizer-toolbar button {
             background: none;
-            border: 1px solid #fff;
             color: white;
             padding: 5px 15px;
             cursor: pointer;
+            display: block;
+            width: fit-content;
         }
         #customizer-toolbar button:hover {
             background-color: #444;
@@ -70,7 +71,8 @@ function activateCustomization() {
         { id: 'backgroundColor', label: 'Background Color' },
         { id: 'moveElement', label: 'Move' },
         { id: 'hideElement', label: 'Hide' },
-        { id: 'cssEditor', label: 'CSS' }
+        { id: 'cssEditor', label: 'CSS' },
+        { id: 'imageChanger', label: 'change Image' },
     ];
 
     buttons.forEach(button => {
@@ -125,6 +127,8 @@ function activateCustomization() {
 
             // Add hover effect for better element selection
             function addHoverEffect(event) {
+                const excludedElement = event.target.closest("#customizer-toolbar");
+                if (excludedElement) return;
                 event.target.style.outline = "3px solid blue";
                 event.target.style.cursor = "pointer"; // Indicate it's clickable
             }
@@ -136,6 +140,9 @@ function activateCustomization() {
 
             // Add a click event listener to the document
             function hideElementOnClick(event) {
+                const excludedElement = event.target.closest("#customizer-toolbar");
+                if (excludedElement) return;
+
                 // Prevent the default action and event bubbling
                 event.preventDefault();
                 event.stopPropagation();
@@ -145,6 +152,7 @@ function activateCustomization() {
                 if (confirmHide) {
                     event.target.style.display = "none";
                 }
+                
             }
 
             // Add an 'Esc' key listener to disable hide mode
