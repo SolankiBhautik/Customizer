@@ -46,6 +46,7 @@ function activateCustomization() {
             color: white;
             padding: 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
             z-index: 9999;
