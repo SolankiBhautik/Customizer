@@ -29,15 +29,15 @@ document.getElementById('reset').addEventListener('click', () => {
 
 
 function activateCustomization() {
-    document.getElementById('customizer-toolbar')?.remove();
+    document.getElementById('customize-toolbar')?.remove();
     // Create the toolbar element
     const toolbar = document.createElement('div');
-    toolbar.id = 'customizer-toolbar';
+    toolbar.id = 'customize-toolbar';
 
     // Add the toolbar CSS (can be external or inline styles)
     const toolbarStyle = document.createElement('style');
     toolbarStyle.textContent = `
-        #customizer-toolbar {
+        #customize-toolbar {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -51,7 +51,7 @@ function activateCustomization() {
             align-items: center;
             z-index: 9999;
         }
-        #customizer-toolbar button {
+        #customize-toolbar button {
             background: none;
             color: white;
             padding: 5px 15px;
@@ -59,7 +59,7 @@ function activateCustomization() {
             display: block;
             width: fit-content;
         }
-        #customizer-toolbar button:hover {
+        #customize-toolbar button:hover {
             background-color: #444;
         }
     `;
@@ -127,9 +127,9 @@ function activateCustomization() {
 
             // Add hover effect for better element selection
             function addHoverEffect(event) {
-                const excludedElement = event.target.closest("#customizer-toolbar");
+                const excludedElement = event.target.closest("#customize-toolbar");
                 if (excludedElement) return;
-                event.target.style.outline = "3px solid blue";
+                event.target.style.outline = "1px dashed blue";
                 event.target.style.cursor = "pointer"; // Indicate it's clickable
             }
 
@@ -140,7 +140,7 @@ function activateCustomization() {
 
             // Add a click event listener to the document
             function hideElementOnClick(event) {
-                const excludedElement = event.target.closest("#customizer-toolbar");
+                const excludedElement = event.target.closest("#customize-toolbar");
                 if (excludedElement) return;
 
                 // Prevent the default action and event bubbling
