@@ -8,9 +8,8 @@
 
 1. **Hide Elements:** Remove unwanted elements like ads, sidebars, or banners with a simple click.
 2. **Change Colors and Styles:** Customize text colors, backgrounds, and CSS properties.
-3. **Drag and Move:** Rearrange elements on the page to suit your workflow.
-4. **Persistent Customizations:** All changes are saved locally and applied automatically every time you visit the same website.
-5. **Simple and Intuitive UI:** Easy-to-use toolbar at the bottom of the page for customization options.
+3. **Persistent Customizations:** All changes are saved locally and applied automatically every time you visit the same website.
+4. **Simple and Intuitive UI:** Hover over elements to see customization options.
 
 ---
 
@@ -19,11 +18,10 @@
 1. Install the extension in your browser.
 2. Navigate to any webpage you want to customize.
 3. Click the **"Activate Customization"** button.
-4. Use the toolbar at the bottom of the page to:
+4. Hover over elements to see customization options like:
    - **Hide elements**
    - **Change colors**
    - **Edit CSS**
-   - **Rearrange elements**
 5. Save your changes, and the extension will remember them for the specific website.
 
 ---
@@ -38,25 +36,23 @@
 3. Enable **Developer Mode** (for Chrome).
 4. Load the unpacked extension by selecting the folder.
 
-### Using the Toolbar
+### Using the Customization Options
 - **Hide Elements:** Hover over elements to see a blue outline, then click to hide them.
-- **Edit CSS:** Use the toolbar to add custom CSS rules to elements.
+- **Edit CSS:** Use the prompt to add custom CSS rules to elements.
 - **Change Colors:** Adjust text and background colors with color pickers.
-- **Reset Changes:** Use the reset option in the toolbar to undo all customizations.
+- **Reset Changes:** Use the reset option to undo all customizations.
 
 ---
 
 ## 👩‍💻 For Developers
 
 ### Code Overview
-- **Toolbar UI:** Built dynamically with JavaScript and injected into the webpage.
 - **Customization Logic:** Uses `MutationObserver` to track and apply changes.
 - **Storage:** Stores customizations in `localStorage`, scoped to individual websites.
 - **Event Listeners:**
   - `click`: For hiding elements.
   - `keydown`: For shortcuts like exiting customization mode.
   - `mousemove`: For showing hover outlines.
-
 
 ---
 
@@ -77,7 +73,7 @@ git clone https://github.com/your-username/customizer-extension.git
 
 2. Navigate to the project folder:
 ```bash
-git clone https://github.com/your-username/customizer-extension.git
+cd customizer-extension
 ```
 
 3. Install dependencies (if applicable):
@@ -85,8 +81,7 @@ git clone https://github.com/your-username/customizer-extension.git
 npm install
 ```
 
---- 
-
+---
 
 ### 📬 Support
 
